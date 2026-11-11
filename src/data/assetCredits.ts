@@ -225,4 +225,13 @@ export const customBuiltAssets: CustomAssetSummary[] = [
     description: "Industrial double-door airlock system featuring equipment lockers, EVA suit staging racks, and cycling control screens.",
     image: "/images/airlock.png",
   },
+  {
+    id: "outpost-night-observation",
+    name: "Outpost Night Observation & Terrain Investigation",
+    module: "Exterior Nocturnal Environment",
+    author: "Osanda Hirushaka (PHOBOSIA Team)",
+    software: "Blender 3D & WebGL Shaders",
+    description: "Atmospheric nocturnal Martian environment and terrain investigation system showcasing high-intensity outpost floodlight banks, sub-zero regolith specular reflection, and night-time planetary observation.",
+    image: "/images/outpost_night_observation.png",
+  },
 ];

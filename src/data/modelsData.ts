@@ -340,4 +340,32 @@ export const modelsData: ModelShowcase[] = [
     ],
     solRelevance: "SOL 6 field mission context and SOL 11 final expedition departure.",
   },
+  {
+    id: "outpost-night-observation",
+    name: "Outpost Night Observation & Terrain Investigation",
+    category: "Exterior",
+    image: "/images/outpost_night_observation.png",
+    tagline: "Nocturnal scientific investigation across the frozen Elysium Planitia terrain",
+    description: "A dramatic nocturnal visual and environmental simulation showing the Martian outpost under the starlit sky. High-intensity floodlight arrays illuminate the rugged regolith, basaltic boulders, and atmospheric dust haze during sub-zero Martian nights (-70°C to -100°C), supporting critical nocturnal scientific investigations, terrain temperature monitoring, and exterior maintenance sweeps.",
+    role: "Nocturnal terrain investigation, perimeter illumination, thermal variance recording, and sub-zero EVA monitoring.",
+    dimensions: "Wide-area 500m night-time exterior survey radius",
+    triangles: "~360,000 tris with dynamic nocturnal lighting",
+    technicalHighlights: [
+      "Volumetric nocturnal atmospheric scattering tuned for Martian low-pressure night conditions",
+      "Dynamic high-intensity exterior spot and floodlight shadows cast across jagged regolith",
+      "Sub-zero mineral specular shaders highlighting nocturnal thermal frost accumulation",
+      "Cinematic contrast grading balancing starry Martian void with warm pressurized outpost emissives"
+    ],
+    associatedScreens: [
+      "Perimeter Night-Vision & Thermal Infrared Camera Array",
+      "Nocturnal Barometric & Temperature Gradient Telemetry",
+      "External Floodlight Bus & Power Storage Monitor"
+    ],
+    inGameInteractions: [
+      "Engage high-power exterior floodlight arrays from Mission Control",
+      "Conduct nocturnal EVA terrain traverses and surface regolith temperature sweeps",
+      "Inspect airlock structural seals under severe cryogenic thermal contraction"
+    ],
+    solRelevance: "Central to SOL 6 nocturnal terrain analysis and SOL 7 pre-storm atmospheric pressure drop monitoring.",
+  },
 ];

@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Maximize2, Compass, Layers } from "lucide-react";
+import { ArrowRight, Maximize2, Compass, Layers, Moon, Sparkles, Radio } from "lucide-react";
 import { modelsData, ModelShowcase } from "@/data/modelsData";
 import { Modal } from "@/components/ui/Modal";
 
@@ -12,6 +12,7 @@ export function EnvironmentTeaser() {
 
   // Showcase 4 prominent modules
   const previewModels = modelsData.slice(0, 4);
+  const nightModel = modelsData.find((m) => m.id === "outpost-night-observation");
 
   return (
     <section className="py-24 bg-space-900/40 border-b border-space-800/80">
@@ -20,23 +21,88 @@ export function EnvironmentTeaser() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
             <p className="text-xs font-mono font-semibold uppercase tracking-widest text-cyan-glow mb-2">
-              Virtual Architecture
+              Virtual Architecture & Environment
             </p>
             <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
               The 3D Martian Outpost
             </h2>
             <p className="mt-2 text-sm text-slate-300 max-w-xl">
-              Engineered entirely in Blender and rendered in real-time WebGL. Explore the interconnected pressurized modules designed for long-term Martian survival.
+              Engineered entirely in Blender and rendered in real-time WebGL. Explore the interconnected pressurized modules and nocturnal terrain investigation systems.
             </p>
           </div>
           <Link
             href="/models"
             className="mt-4 md:mt-0 inline-flex items-center gap-2 text-sm font-semibold text-mars-400 hover:text-mars-300 transition-colors"
           >
-            <span>View all 13 models & galleries</span>
+            <span>View all 3D models & night gallery</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
+
+        {/* FEATURED: Outpost Night Observation & Terrain Investigation */}
+        {nightModel && (
+          <div className="mb-12 rounded-3xl overflow-hidden bg-gradient-to-r from-space-950 via-space-900 to-space-950 border border-cyan-500/30 shadow-2xl">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 p-6 sm:p-8 items-center">
+              <div
+                className="lg:col-span-7 relative h-64 sm:h-80 rounded-2xl overflow-hidden border border-space-800 group cursor-pointer"
+                onClick={() => setSelectedModel(nightModel)}
+              >
+                <Image
+                  src={nightModel.image}
+                  alt={nightModel.name}
+                  fill
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-space-950/80 via-transparent to-transparent" />
+                <div className="absolute top-4 left-4">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium bg-space-950/80 backdrop-blur-md border border-cyan-500/40 text-cyan-300">
+                    <Moon className="w-3.5 h-3.5 text-cyan-400" />
+                    <span>Nocturnal Mars Investigation</span>
+                  </span>
+                </div>
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedModel(nightModel);
+                  }}
+                  className="absolute bottom-4 right-4 p-2 rounded-xl bg-space-900/90 text-white border border-space-700 hover:bg-cyan-600 transition-colors shadow-lg"
+                  title="Expand 3D preview"
+                >
+                  <Maximize2 className="w-4 h-4" />
+                </button>
+              </div>
+
+              <div className="lg:col-span-5 space-y-4">
+                <span className="text-xs font-mono uppercase text-cyan-400 font-bold tracking-wider">
+                  Nocturnal Terrain Simulation
+                </span>
+                <h3 className="text-2xl font-bold text-white">
+                  Night-Time Investigation on Mars Terrain
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                  During sub-zero Martian nights (-70°C to -100°C), high-intensity outpost floodlight arrays illuminate the cold regolith, basaltic boulders, and suspended atmospheric dust haze for critical nocturnal surface surveying and thermal contraction checks.
+                </p>
+                <div className="pt-2 flex flex-wrap items-center gap-4">
+                  <button
+                    type="button"
+                    onClick={() => setSelectedModel(nightModel)}
+                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-semibold transition-colors"
+                  >
+                    <span>Inspect Night Environment</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </button>
+                  <Link
+                    href="/models"
+                    className="text-xs text-mars-400 hover:text-mars-300 font-mono transition-colors"
+                  >
+                    Explore all architectural sectors →
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* 4 Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

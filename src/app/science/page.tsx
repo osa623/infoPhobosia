@@ -179,6 +179,48 @@ export default function SciencePage() {
           </div>
         </div>
 
+        {/* Section 5: Nocturnal Atmospheric & Terrain Investigation */}
+        <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-space-950 via-space-900 to-space-950 border border-cyan-500/30 shadow-xl mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="lg:col-span-6 relative h-64 sm:h-80 rounded-2xl overflow-hidden border border-space-800">
+              <img
+                src="/images/outpost_night_observation.png"
+                alt="Martian Terrain Night-Time Investigation"
+                className="w-full h-full object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-space-950/80 via-transparent to-transparent" />
+              <span className="absolute bottom-4 left-4 text-xs font-mono text-cyan-300 bg-space-950/90 px-3 py-1 rounded-lg border border-cyan-500/40">
+                Night Observation • Elysium Planitia
+              </span>
+            </div>
+
+            <div className="lg:col-span-6 space-y-4">
+              <span className="text-xs font-mono uppercase text-cyan-400 font-bold tracking-wider">
+                Planetary Thermodynamics
+              </span>
+              <h3 className="text-2xl font-bold text-white">
+                Nocturnal Science & Extreme Thermal Gradients
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Because Mars has an ultra-thin atmosphere (surface pressure ~610 Pa, less than 1% of Earth), ground heat rapidly radiates into space at nightfall. Temperatures in Elysium Planitia plunge from a daytime peak of -15°C down to -100°C before dawn.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono">
+                <div className="p-3 rounded-xl bg-space-950 border border-space-800">
+                  <span className="text-slate-500 block text-[10px]">Thermal Swing:</span>
+                  <span className="text-mars-400 font-bold">ΔT ~85°C per Sol</span>
+                </div>
+                <div className="p-3 rounded-xl bg-space-950 border border-space-800">
+                  <span className="text-slate-500 block text-[10px]">Nocturnal Min:</span>
+                  <span className="text-cyan-400 font-bold">-100°C (-148°F)</span>
+                </div>
+              </div>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                In PHOBOSIA, nocturnal EVA investigations require monitoring cryogenic structural contractions, ground regolith frost behavior, and managing floodlight power grids under severe battery discharge rates.
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Bottom Navigation */}
         <div className="pt-8 border-t border-space-800 flex flex-wrap items-center justify-between gap-4">
           <Link
