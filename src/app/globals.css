@@ -1,6 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme static {
+  --font-sans: "DM Sans", sans-serif;
+  --font-display: "Bricolage Grotesque", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-russo: "Russo One", sans-serif;
+  --font-kdam: "Kdam Thmor Pro", sans-serif;
+  --font-londrina: "Londrina Solid", sans-serif;
+  --font-bebas: "Bebas Neue", sans-serif;
+  --font-kanit: "Kanit", sans-serif;
+  --font-atma: "Atma", sans-serif;
+
   --color-space-950: #04070e;
   --color-space-900: #080d19;
   --color-space-850: #0c1424;
@@ -23,7 +41,51 @@ html {
   scroll-behavior: smooth;
   background-color: #04070e;
   color: #f1f5f9;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+p,
+li {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+h2 {
+  font-family: "Russo One", sans-serif;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+nav a,
+button {
+  font-family: "Kanit", sans-serif;
+}
+
+small,
+label,
+time,
+dt {
+  font-family: "Kdam Thmor Pro", sans-serif;
+}
+
+figcaption {
+  font-family: "Londrina Solid", sans-serif;
+}
+
+blockquote {
+  font-family: "Atma", sans-serif;
 }
 
 /* Custom subtle scrollbar */

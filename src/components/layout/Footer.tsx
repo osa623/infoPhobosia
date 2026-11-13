@@ -8,6 +8,26 @@ export function Footer() {
   return (
     <footer className="border-t border-space-800 bg-space-950 text-slate-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+        <div className="mb-10 flex flex-col items-center gap-3 border-b border-space-800/80 pb-8 text-center">
+          <p className="z-20  text-[15px] font-londrina font-thin font-semibold uppercase tracking-[0.2em] text-slate-500">
+           Recognitions for Phobosia 
+          </p>
+          <a
+            href="https://websitedesignawards.com/site/phobosia"
+            rel="noopener"
+            aria-label="PHOBOSIA — Honorable Mention, Website Design Awards"
+            className="inline-flex rounded-lg transition-opacity hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-mars-400"
+          >
+            <img
+              src="https://websitedesignawards.com/api/public/badge/5e68816f-6d64-43d9-a860-4b829f75fe4d/svg?variant=dark"
+              alt="PHOBOSIA — Honorable Mention, Website Design Awards"
+              width="240"
+              height="88"
+              loading="lazy"
+              className="h-auto w-[200px] sm:w-[240px]"
+            />
+          </a>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Column 1: Brand & Synopsis */}
           <div className="space-y-4">
